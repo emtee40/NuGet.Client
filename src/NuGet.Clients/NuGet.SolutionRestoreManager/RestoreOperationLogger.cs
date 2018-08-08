@@ -59,9 +59,8 @@ namespace NuGet.SolutionRestoreManager
         { }
 
         // Set the base logger to debug level, all filter will be done here.
-        [ImportingConstructor]
+
         public RestoreOperationLogger(
-            [Import(typeof(SVsServiceProvider))]
             IAsyncServiceProvider asyncServiceProvider,
             IOutputConsoleProvider outputConsoleProvider)
             : base(LogLevel.Debug)
